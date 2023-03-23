@@ -2,18 +2,18 @@
   "stats": {
     "suites": 11,
     "tests": 9,
-    "passes": 1,
+    "passes": 2,
     "pending": 0,
-    "failures": 8,
-    "start": "2023-03-08T11:43:27.351Z",
-    "end": "2023-03-08T11:43:27.751Z",
-    "duration": 400
+    "failures": 7,
+    "start": "2023-03-23T05:58:17.034Z",
+    "end": "2023-03-23T05:58:17.462Z",
+    "duration": 428
   },
   "tests": [
     {
       "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
       "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
-      "duration": 1,
+      "duration": 2,
       "currentRetry": 0,
       "err": {}
     },
@@ -22,40 +22,34 @@
       "fullTitle": "index.js Array functions destructivelyAppendCat(name) appends a cat to the end of the cats array",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyAppendCat is not defined\n    at Context.<anonymous> (test/indexTest.js:19:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyAppendCat is not defined"
-      }
+      "err": {}
     },
     {
       "title": "prepends a cat to the beginning of the cats array",
       "fullTitle": "index.js Array functions destructivelyPrependCat(name) prepends a cat to the beginning of the cats array",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyPrependCat is not defined\n    at Context.<anonymous> (test/indexTest.js:27:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyPrependCat is not defined"
-      }
+      "err": {}
     },
     {
       "title": "removes the last cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveLastCat() removes the last cat from the cats array",
-      "duration": 0,
+      "duration": 3,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: destructivelyRemoveLastCat is not defined\n    at Context.<anonymous> (test/indexTest.js:35:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyRemoveLastCat is not defined"
+        "message": "expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Milo', 'Otis' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n]",
+        "stack": "AssertionError: expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Milo', 'Otis' ]\n    at Context.<anonymous> (test/indexTest.js:37:38)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
       "title": "removes the first cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveFirstCat() removes the first cat from the cats array",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyRemoveFirstCat is not defined\n    at Context.<anonymous> (test/indexTest.js:43:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyRemoveFirstCat is not defined"
-      }
+      "err": {}
     },
     {
       "title": "appends a cat to the cats array and returns a new array, leaving the cats array unchanged",
@@ -63,8 +57,10 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: appendCat is not defined\n    at Context.<anonymous> (test/indexTest.js:51:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "appendCat is not defined"
+        "message": "expected 5 to be an array",
+        "showDiff": false,
+        "actual": 5,
+        "stack": "AssertionError: expected 5 to be an array\n    at Context.<anonymous> (test/indexTest.js:51:52)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
@@ -73,18 +69,22 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: prependCat is not defined\n    at Context.<anonymous> (test/indexTest.js:59:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "prependCat is not defined"
+        "message": "expected 5 to be an array",
+        "showDiff": false,
+        "actual": 5,
+        "stack": "AssertionError: expected 5 to be an array\n    at Context.<anonymous> (test/indexTest.js:59:54)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
       "title": "removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions removeLastCat() removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: removeLastCat is not defined\n    at Context.<anonymous> (test/indexTest.js:67:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "removeLastCat is not defined"
+        "message": "expected 'Otis' to be an array",
+        "showDiff": false,
+        "actual": "Otis",
+        "stack": "AssertionError: expected 'Otis' to be an array\n    at Context.<anonymous> (test/indexTest.js:67:49)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
@@ -93,8 +93,10 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: removeFirstCat is not defined\n    at Context.<anonymous> (test/indexTest.js:75:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "removeFirstCat is not defined"
+        "message": "expected 'Otis' to be an array",
+        "showDiff": false,
+        "actual": "Otis",
+        "stack": "AssertionError: expected 'Otis' to be an array\n    at Context.<anonymous> (test/indexTest.js:75:50)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     }
   ],
@@ -105,39 +107,26 @@
       "fullTitle": "index.js Array functions destructivelyAppendCat(name) appends a cat to the end of the cats array",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyAppendCat is not defined\n    at Context.<anonymous> (test/indexTest.js:19:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyAppendCat is not defined"
-      }
+      "err": {}
     },
     {
       "title": "prepends a cat to the beginning of the cats array",
       "fullTitle": "index.js Array functions destructivelyPrependCat(name) prepends a cat to the beginning of the cats array",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyPrependCat is not defined\n    at Context.<anonymous> (test/indexTest.js:27:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyPrependCat is not defined"
-      }
+      "err": {}
     },
     {
       "title": "removes the last cat from the cats array",
       "fullTitle": "index.js Array functions destructivelyRemoveLastCat() removes the last cat from the cats array",
-      "duration": 0,
+      "duration": 3,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: destructivelyRemoveLastCat is not defined\n    at Context.<anonymous> (test/indexTest.js:35:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyRemoveLastCat is not defined"
-      }
-    },
-    {
-      "title": "removes the first cat from the cats array",
-      "fullTitle": "index.js Array functions destructivelyRemoveFirstCat() removes the first cat from the cats array",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: destructivelyRemoveFirstCat is not defined\n    at Context.<anonymous> (test/indexTest.js:43:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "destructivelyRemoveFirstCat is not defined"
+        "message": "expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Milo', 'Otis' ]",
+        "showDiff": true,
+        "actual": "[\n  \"Milo\"\n  \"Otis\"\n  \"Garfield\"\n]",
+        "expected": "[\n  \"Milo\"\n  \"Otis\"\n]",
+        "stack": "AssertionError: expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Milo', 'Otis' ]\n    at Context.<anonymous> (test/indexTest.js:37:38)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
@@ -146,8 +135,10 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: appendCat is not defined\n    at Context.<anonymous> (test/indexTest.js:51:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "appendCat is not defined"
+        "message": "expected 5 to be an array",
+        "showDiff": false,
+        "actual": 5,
+        "stack": "AssertionError: expected 5 to be an array\n    at Context.<anonymous> (test/indexTest.js:51:52)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
@@ -156,18 +147,22 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: prependCat is not defined\n    at Context.<anonymous> (test/indexTest.js:59:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "prependCat is not defined"
+        "message": "expected 5 to be an array",
+        "showDiff": false,
+        "actual": 5,
+        "stack": "AssertionError: expected 5 to be an array\n    at Context.<anonymous> (test/indexTest.js:59:54)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
       "title": "removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
       "fullTitle": "index.js Array functions removeLastCat() removes the last cat in the cats array and returns a new array, leaving the cats array unchanged",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: removeLastCat is not defined\n    at Context.<anonymous> (test/indexTest.js:67:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "removeLastCat is not defined"
+        "message": "expected 'Otis' to be an array",
+        "showDiff": false,
+        "actual": "Otis",
+        "stack": "AssertionError: expected 'Otis' to be an array\n    at Context.<anonymous> (test/indexTest.js:67:49)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     },
     {
@@ -176,8 +171,10 @@
       "duration": 0,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: removeFirstCat is not defined\n    at Context.<anonymous> (test/indexTest.js:75:9)\n    at processImmediate (node:internal/timers:466:21)",
-        "message": "removeFirstCat is not defined"
+        "message": "expected 'Otis' to be an array",
+        "showDiff": false,
+        "actual": "Otis",
+        "stack": "AssertionError: expected 'Otis' to be an array\n    at Context.<anonymous> (test/indexTest.js:75:50)\n    at process.processImmediate (node:internal/timers:475:21)"
       }
     }
   ],
@@ -185,6 +182,13 @@
     {
       "title": "is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
       "fullTitle": "index.js cats is assigned an initial value of [\"Milo\", \"Otis\", \"Garfield\"]",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "removes the first cat from the cats array",
+      "fullTitle": "index.js Array functions destructivelyRemoveFirstCat() removes the first cat from the cats array",
       "duration": 1,
       "currentRetry": 0,
       "err": {}
